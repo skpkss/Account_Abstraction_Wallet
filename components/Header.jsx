@@ -11,7 +11,7 @@ const Header = (props) => {
 
     return (
         <div className="flex items-center justify-between py-4 gap-5">
-            <Link href="/" className="text-xl font-bold">Happy Wallet</Link>
+            <Link href="/" className="text-xl font-bold">Wallet</Link>
             <Link href="/Guide" className='text-lgfont-medium'>Guide</Link>
             <Link href="/Circle" className='text-lgfont-medium'>Circle</Link>
             <div className="relative ml-auto">

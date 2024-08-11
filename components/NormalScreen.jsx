@@ -17,12 +17,12 @@ export default function NormalScreen() {
     const [privateKey, setPrivateKey] = useState();
     const [balance, setBalance] = useState();
     const [config, setConfig] = useState({
-        rpcUrl: `https://api.stackup.sh/v1/node/${process.env.NEXT_PUBLIC_API_KEY}`,
+        rpcUrl: `https://api.stackup.sh/v1/node/887ed5a7ba4146dc3c53aa61d8e978ba3389337c69b8d435a19571e98eeee491`,
         signingKey: privateKey,
         entryPoint: "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
-        simpleAccountFactory: "0x4fCCb94c16C519F2b568dE6f444442F10075Dc1e",
+        simpleAccountFactory: "0x9406Cc6185a346906296840746125a0E44976454",
         paymaster: {
-            rpcUrl: "https://api.stackup.sh/v1/paymaster/API_KEY",
+            rpcUrl: "https://api.stackup.sh/v1/paymaster/887ed5a7ba4146dc3c53aa61d8e978ba3389337c69b8d435a19571e98eeee491",
             context: {},
         },
     })
@@ -64,7 +64,7 @@ export default function NormalScreen() {
         // const provider = new ethers.providers.Web3Provider(window.ethereum)
         // const alchemyApiKey = process.env.API_KEY;
         // const providerUrl = `https://eth-mumbai.alchemyapi.io/v2/${alchemyApiKey}`;
-        const provider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.maticvigil.com");
+        const provider = new ethers.providers.JsonRpcProvider("https://rpc.ankr.com/polygon_mumbai");
         try {
             let bal = await provider.getBalance(userAddress);
             console.log(bal.toString());
